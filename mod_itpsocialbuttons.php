@@ -26,8 +26,8 @@ if($params->get("loadCss")) {
     $doc->addStyleSheet($urlPath . "style.css");
 }
 
-$link   = JURI::getInstance()->toString();
-$title  = $doc->getTitle();
+$link  	 	= JURI::getInstance()->toString();
+$title  	= $doc->getTitle();
 
 $title      = rawurlencode($title);
 $link       = rawurlencode($link);

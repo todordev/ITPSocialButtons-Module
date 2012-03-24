@@ -140,13 +140,13 @@
                    <option value="jmp">j.mp</option>
                 </field>
                 
-                <field name="spacer6" type="spacer" class="text" label="############# ITPSocialButtons SETTINGS #############" />
+                <field name="spacer2" type="spacer" class="text" label="############# ITPSocialButtons SETTINGS #############" />
                 <field name="loadCss" type="radio" default="1" label="Load style.css" description="The style.css is a file that conations button position and some styles for the icons. You can disable the file loading if you have your ones.">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
                 
-                <field name="spacer2" type="spacer" class="text" label="############# EXTRA BUTTONS SETTINGS #############" />
+                <field name="spacer3" type="spacer" class="text" label="############# EXTRA BUTTONS SETTINGS #############" />
                 <field name="ebuttons1" type="textarea" default="" label="Custom code 1" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
                 <field name="ebuttons2" type="textarea" default="" label="Custom code 2" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
                 <field name="ebuttons3" type="textarea" default="" label="Custom code 3" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />

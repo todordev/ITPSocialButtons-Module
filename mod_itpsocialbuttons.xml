@@ -1,158 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="2.5" client="site" method="upgrade">
-	<name>ITPSocialButtons</name>
-	<author>Todor Iliev</author>
-	<creationDate>January, 2010</creationDate>
-	<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
-	<license>http://www.gnu.org/copyleft/gpl.html</license>
-	<authorEmail>todor@itprism.com</authorEmail>
-	<authorUrl>http://itprism.com</authorUrl>
-	<version>1.8</version>
-	<description>MOD_ITPSOCIALBUTTONS_DESC</description>
-	<languages>
-		<language tag="en-GB">en-GB.mod_itpsocialbuttons.ini</language>
-		<language tag="en-GB">en-GB.mod_itpsocialbuttons.sys.ini</language>
-	</languages>    
-	
+<install type="module" version="1.5.0" method="upgrade">
+<name>ITPSocialButtons</name>
+<author>Todor Iliev</author>
+<creationDate>January, 2010</creationDate>
+<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
+<license>http://www.gnu.org/copyleft/gpl.html</license>
+<authorEmail>todor@itprism.com</authorEmail>
+<authorUrl>http://itprism.com</authorUrl>
+<version>1.8</version>
+<description>MOD_ITPSOCIALBUTTONS_DESC</description>
 	<files>
 		<filename module="mod_itpsocialbuttons">mod_itpsocialbuttons.php</filename>
 		<filename>index.html</filename>
 		<filename>helper.php</filename>
 		<filename>style.css</filename>
 		<filename>itpshorturlsocialbuttons.php</filename>
-		<filename>README.md</filename>
 		<folder>images</folder>
 		<folder>tmpl</folder>
 	</files>
 
-	<config>
-		<fields name="params">
-			<fieldset name="basic">
-				<field name="style" type="list" default="big" label="Style" description="Choose from these icon styles." >
-				   <option value="big">Big buttons</option>
-                   <option value="small">Small buttons</option>
-                   <option value="texto">Texto</option>
-                   <option value="balloon">Balloon</option>
-                   <option value="handdrawn">Handdrawn</option>
-                   <option value="elegant">Elegant</option>
-                   <option value="aquaticus">Aquaticus</option>
-                   <option value="aquasmall">Small Aquaticus</option>
-                   <option value="circular64">Circular 64px</option>
-                   <option value="circular32">Circular 32px</option>
-                   <option value="umar">Umar</option>
-                   <option value="classy">Classy</option>
-                   <option value="drink">Drink</option>
-                   <option value="buddycircular">Buddy Circular</option>
-                   <option value="buddyrounded">Buddy Rounded</option>
-                   <option value="isometrica">Isometrica</option>
-                   <option value="isometricasmall">Isometrica Small</option>
-                   <option value="vector">Vector Social Icons</option>
-                   <option value="wpzoom24">WP Zoom 24x24px</option>
-                   <option value="wpzoom32">WP Zoom 32x32px</option>
-                   <option value="wpzoom48">WP Zoom 48x48px</option>
-                   <option value="wpzoom64">WP Zoom 64x64px</option>
-                   <option value="naqvi">Naqvi</option>
-                   <option value="neon">Neon</option>
-                   <option value="socialclean32">Social Clean 32x32px</option>
-                   <option value="socialclean48">Social Clean 48x48px</option>
-                   <option value="infocus1">In Focus 1</option>
-                   <option value="infocus2">In Focus 2</option>
-                   <option value="socialshift32">Social Shift 32x32px</option>
-                   <option value="socialshift64">Social Shift 64x64px</option>
-				</field>
-									
-				<field name="showTitle" type="radio" default="1" label="Display title" description="Display the title which is located on the top of the icons." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="title" type="text" default="Share this post" size="80" label="Title" description="The title which is located on the top of the icons." />
-				
-				<field name="displayLines" type="list" default="itp-sbb-bothl" label="Display lines" description="Shows or hide dividing lines which will be appear in above or below the icons." >
-				   <option value="itp-sbb-nl">None</option>
-				   <option value="itp-sbb-tl">Only Top</option>
-				   <option value="itp-sbb-bl">Only Bottom</option>
-				   <option value="itp-sbb-bothl">Both</option>
-				</field>
-				
-				<field name="displayIcons" type="list" default="itp-sbb-left" label="Icons position" description="This is a position of the icons." >
-				   <option value="itp-sb-left">Left</option>
-				   <option value="itp-sb-right">Right</option>
-				   <option value="itp-sb-center">Center</option>
-				</field>
-				
-				<field name="displayDelicious" type="radio" default="1" label="Display Delicious" description="Show or Hide Delicious button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="displayDigg" type="radio" default="1" label="Display Digg" description="Show or Hide Digg button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="displayFacebook" type="radio" default="1" label="Display Facebook" description="Show or Hide Facebook button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="displayGoogle" type="radio" default="1" label="Display Google" description="Show or Hide Google button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="displayLinkedIn" type="radio" default="1" label="Display LinkedIn" description="Show or Hide LinkedIn button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="displaySumbleUpon" type="radio" default="1" label="Display SumbleUpon" description="Show or Hide SumbleUpon button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="displayTechnorati" type="radio" default="1" label="Display Technorati" description="Show or Hide Technorati button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-				<field name="displayTwitter" type="radio" default="1" label="Display Twitter" description="Show or Hide Twitter button." >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
-				</field>
-			</fieldset>
+	<params>
+		<param name="style" type="list" default="big" label="Style" description="Choose from these icon styles." >
+	         <option value="big">Big buttons</option>
+	         <option value="small">Small buttons</option>
+	         <option value="texto">Texto</option>
+	         <option value="balloon">Balloon</option>
+	         <option value="handdrawn">Handdrawn</option>
+	         <option value="elegant">Elegant</option>
+	         <option value="aquaticus">Aquaticus</option>
+	         <option value="aquasmall">Small Aquaticus</option>
+	         <option value="circular64">Circular 64px</option>
+	         <option value="circular32">Circular 32px</option>
+	         <option value="umar">Umar</option>
+	         <option value="classy">Classy</option>
+	         <option value="drink">Drink</option>
+	         <option value="buddycircular">Buddy Circular</option>
+	         <option value="buddyrounded">Buddy Rounded</option>
+	         <option value="isometrica">Isometrica</option>
+	         <option value="isometricasmall">Isometrica Small</option>
+	         <option value="vector">Vector Social Icons</option>
+	         <option value="wpzoom24">WP Zoom 24x24px</option>
+	         <option value="wpzoom32">WP Zoom 32x32px</option>
+	         <option value="wpzoom48">WP Zoom 48x48px</option>
+	         <option value="wpzoom64">WP Zoom 64x64px</option>
+	         <option value="naqvi">Naqvi</option>
+	         <option value="neon">Neon</option>
+	         <option value="socialclean32">Social Clean 32x32px</option>
+	         <option value="socialclean48">Social Clean 48x48px</option>
+	         <option value="infocus1">In Focus 1</option>
+	         <option value="infocus2">In Focus 2</option>
+	         <option value="socialshift32">Social Shift 32x32px</option>
+	         <option value="socialshift64">Social Shift 64x64px</option>
+	    </param>
+	                        
+	    <param name="showTitle" type="radio" default="1" label="Show title" description="Display the title which is located on the top of the icons." >
+	       <option value="0">No</option>
+	       <option value="1">Yes</option>
+	    </param>
+		<param name="title" type="text" default="Share this post" size="80" label="Title" description="The title which is located on the top of the icons." />
+		
+	    <param name="displayLines" type="list" default="itp-sbb-bothl" label="Display lines" description="Shows or hide dividing lines which will be appear in above or below the icons." >
+           <option value="itp-sbb-nl">None</option>
+           <option value="itp-sbb-tl">Only Top</option>
+           <option value="itp-sbb-bl">Only Bottom</option>
+           <option value="itp-sbb-bothl">Both</option>
+        </param>
+        
+        <param name="displayIcons" type="list" default="itp-sbb-left" label="Icons position" description="This is a position of the icons." >
+           <option value="itp-sb-left">Left</option>
+           <option value="itp-sb-right">Right</option>
+           <option value="itp-sb-center">Center</option>
+        </param>
+        
+        <param name="displayDelicious" type="radio" default="1" label="Display Delicious" description="Show or Hide Delicious button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+        <param name="displayDigg" type="radio" default="1" label="Display Digg" description="Show or Hide Digg button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+        <param name="displayFacebook" type="radio" default="1" label="Display Facebook" description="Show or Hide Facebook button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+        <param name="displayGoogle" type="radio" default="1" label="Display Google" description="Show or Hide Google button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+        <param name="displayLinkedIn" type="radio" default="1" label="Display LinkedIn" description="Show or Hide LinkedIn button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+        <param name="displaySumbleUpon" type="radio" default="1" label="Display SumbleUpon" description="Show or Hide SumbleUpon button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+        <param name="displayTechnorati" type="radio" default="1" label="Display Technorati" description="Show or Hide Technorati button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+        <param name="displayTwitter" type="radio" default="1" label="Display Twitter" description="Show or Hide Twitter button." >
+           <option value="0">No</option>
+           <option value="1">Yes</option>
+        </param>
+	</params>
 
-			<fieldset name="advanced">
-				<field name="moduleclass_sfx" type="text"
-					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-
-				<field name="owncache" type="list" default="1"
-					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
-					<option value="1">JGLOBAL_USE_GLOBAL</option>
-					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
-					</option>
-				</field>
-
-				<field name="cache_time" type="text" default="900"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
-					
-				<field name="spacer1" type="spacer" class="text" label="############# SHORTENER URL SETTINGS #############"  />
-                
-                <field name="login" type="text" default="" label="Login" description="Username for the shortener URL service."/>
-                <field name="apiKey" type="text" default="" size="80" label="API key" description="An API key for the shortener URL serivce."/>
-                <field name="shortUrlService" type="list" default="" label="Shortener service" description="You can select a shortener URL service. To work properly, a PHP option 'allow_url_fopen' must be enabled. You must enable PHP curl for Google shortener serice." >
-                   <option value="">None</option>
-                   <option value="bitly">bit.ly</option>
-                   <option value="tinycc">tiny.cc</option>
-                   <option value="jmp">j.mp</option>
-                </field>
-                
-                <field name="spacer6" type="spacer" class="text" label="############# ITPSocialButtons SETTINGS #############" />
-                <field name="loadCss" type="radio" default="1" label="Load style.css" description="The style.css is a file that conations button position and some styles for the icons. You can disable the file loading if you have your ones.">
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-                
-                <field name="spacer2" type="spacer" class="text" label="############# EXTRA BUTTONS SETTINGS #############" />
-                <field name="ebuttons1" type="textarea" default="" label="Custom code 1" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons2" type="textarea" default="" label="Custom code 2" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons3" type="textarea" default="" label="Custom code 3" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons4" type="textarea" default="" label="Custom code 4" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons5" type="textarea" default="" label="Custom code 5" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-			</fieldset>
-		</fields>
-	</config>
-</extension>
+    <params group="advanced">
+		<param name="moduleclass_sfx" type="text" default="" size="80" label="MODULE_CSS_SUFFIX" description="MODULE_CSS_SUFFIX_DESC" />
+        <param name="cache" type="list" default="0" label="CACHING" description="CACHING_DESC">
+            <option value="1">Use global</option>
+            <option value="0">No caching</option>
+        </param>
+        <param name="cache_time" type="text" default="900" label="CACHING_TIME" description="CACHING_TIME_DESC" />
+        <param name="@spacer1" type="spacer" default="############# SHORTENER URL SETTINGS #############" label="" description="" />
+        <param name="login" type="text" default="" label="Login" description="Username for the shortener URL service."/>
+        <param name="apiKey" type="text" default="" size="80" label="API key" description="An API key for the shortener URL serivce."/>
+        <param name="shortUrlService" type="list" default="" label="Shortener service" description="You can select a shortener URL service. To work properly, a PHP option 'allow_url_fopen' must be enabled. You must enable PHP curl for Google shortener serice." >
+           <option value="">None</option>
+           <option value="bitly">bit.ly</option>
+           <option value="tinycc">tiny.cc</option>
+           <option value="jmp">j.mp</option>
+        </param>
+        
+        <param name="@spacer2" type="spacer" default="############# ITPSocialButtons SETTINGS #############"  />
+        <param name="loadCss" type="radio" default="1" label="Load style.css" description="The style.css is a file that conations button position and some styles of the ReTweetMe button. You can disable the file loading if you have your own styles.">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        
+        <param name="@spacer3" type="spacer" default="############# ADDITIONAL BUTTONS SETTINGS #############" label="" description="" />
+        <param name="ebuttons1" type="textarea" default="" label="Custom code 1" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons2" type="textarea" default="" label="Custom code 2" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons3" type="textarea" default="" label="Custom code 3" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons4" type="textarea" default="" label="Custom code 4" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons5" type="textarea" default="" label="Custom code 5" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+    </params>
+	
+	<languages>
+        <language tag="en-GB">en-GB.mod_itpsocialbuttons.ini</language>
+    </languages>    
+</install>

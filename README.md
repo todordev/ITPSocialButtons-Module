@@ -1,4 +1,4 @@
-ITPSocialButtons Module for Joomla! 
+ITPSocialButtons Module for Joomla! 1.5
 ==========================
 ( Version 1.8 )
 --------------------------

@@ -42,7 +42,7 @@
 	float:left;
 }
 
-.itp-sb-left img{
+.itp-sb-left a{
 	border:0 !important;
 	margin-right: 5px;
 }
@@ -51,7 +51,7 @@
     float:right;
 }
 
-.itp-sb-right img{
+.itp-sb-right a{
     border:0 !important;
     margin-left: 5px;
 }
@@ -62,7 +62,7 @@
     text-align:center !important;
 }
 
-.itp-sb-center img{
+.itp-sb-center a{
     border:0 !important;
     margin-left: 5px;
 }

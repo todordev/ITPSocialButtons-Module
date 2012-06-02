@@ -37,17 +37,32 @@
   overflow:hidden;
 }
 
-
 .itp-sb-left{
 	float:left;
+}
+
+.itp-sb-left img{
+	border:0 !important;
+	margin-right: 5px;
 }
 
 .itp-sb-right{
     float:right;
 }
 
+.itp-sb-right img{
+	border:0 !important;
+	margin-left: 5px;
+}
+
 .itp-sb-center{
     margin-left: auto;
     margin-right: auto;
     text-align:center !important;
+
+.itp-sb-center img{
+	border:0 !important;
+	margin-left: 5px;
+}
+
 }

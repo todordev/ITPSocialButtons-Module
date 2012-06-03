@@ -84,79 +84,55 @@ class ItpSocialButtonsHelper{
             
         $img_url = $style. "/delicious.png";
         
-        return '<a href="http://del.icio.us/post?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Delicious") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Delicious") . '" />
-        </a>';
-    
+        return '<a href="http://del.icio.us/post?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Delicious") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Delicious") . '" /></a>';
     }
     
     public static function getDiggButton($title, $link, $style){
         
         $img_url = $style . "/digg.png";
         
-        return '<a href="http://digg.com/submit?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Digg") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Digg") . '" />
-        </a>';
-    
+        return '<a href="http://digg.com/submit?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Digg") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Digg") . '" /></a>';
     }
     
     public static function getFacebookButton($title, $link, $style){
         
         $img_url = $style . "/facebook.png";
         
-        return '<a href="http://www.facebook.com/sharer.php?u=' . $link . '&amp;t=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Facebook") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Facebook") . '" />
-        </a>';
-    
+        return '<a href="http://www.facebook.com/sharer.php?u=' . $link . '&amp;t=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Facebook") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Facebook") . '" /></a>';
     }
     
     public static function getGoogleButton($title, $link, $style){
         
         $img_url = $style . "/google.png";
         
-        return '<a href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=' . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Bookmarks") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Bookmarks") . '" />
-        </a>';
-    
+        return '<a href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=' . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Bookmarks") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Bookmarks") . '" /></a>';
     }
     
     public static function getStumbleuponButton($title, $link, $style){
         
         $img_url = $style . "/stumbleupon.png";
         
-        return '<a href="http://www.stumbleupon.com/submit?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Stumbleupon") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Stumbleupon") . '" />
-        </a>';
-    
+        return '<a href="http://www.stumbleupon.com/submit?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Stumbleupon") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Stumbleupon") . '" /></a>';
     }
     
     public static function getTechnoratiButton($title, $link, $style){
         
         $img_url = $style . "/technorati.png";
         
-        return '<a href="http://technorati.com/faves?add=' . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Technorati") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Technorati") . '" />
-        </a>';
-    
+        return '<a href="http://technorati.com/faves?add=' . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Technorati") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Technorati") . '" /></a>';
     }
     
     public static function getTwitterButton($title, $link, $style){
         
         $img_url = $style . "/twitter.png";
         
-        return '<a href="http://twitter.com/share?text=' . $title . "&amp;url=" . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Twitter") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Twitter") . '" />
-        </a>';
-    
+        return '<a href="http://twitter.com/share?text=' . $title . "&amp;url=" . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Twitter") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Twitter") . '" /></a>';
     }
     
     public static function getLinkedInButton($title, $link, $style){
         
         $img_url = $style . "/linkedin.png";
         
-        return '<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=' . $link .'&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "LinkedIn") . '" target="_blank" >
-        <img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "LinkedIn") . '" />
-        </a>';
-    
+        return '<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=' . $link .'&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "LinkedIn") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "LinkedIn") . '" /></a>';
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5" method="upgrade">
-<name>MOD_ITPSOCIALBUTTONS</name>
+<name>ITPSocialButtons</name>
 <author>Todor Iliev</author>
 <creationDate>January, 2010</creationDate>
 <copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>

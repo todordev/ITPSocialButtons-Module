@@ -9,9 +9,9 @@
 	<authorUrl>http://itprism.com</authorUrl>
 	<version>1.8</version>
 	<description>MOD_ITPSOCIALBUTTONS_DESC</description>
-	<languages>
-		<language tag="en-GB">en-GB.mod_itpsocialbuttons.ini</language>
-		<language tag="en-GB">en-GB.mod_itpsocialbuttons.sys.ini</language>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_itpsocialbuttons.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_itpsocialbuttons.sys.ini</language>
 	</languages>    
 	
 	<files>

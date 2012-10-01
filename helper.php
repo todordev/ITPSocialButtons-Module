@@ -12,7 +12,7 @@
  */
 
 // no direct access
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die;
 
 class ItpSocialButtonsHelper{
     
@@ -25,13 +25,13 @@ class ItpSocialButtonsHelper{
      */
     public static function getShortUrl($link, $params){
         
-        JLoader::register("ItpShortUrlSocialButtons",JPATH_PLUGINS.DS."content".DS."itpsocialbuttons".DS."itpshorturlsocialbuttons.php");
+        JLoader::register("ItpShortUrlSocialButtonsModule", JPATH_BASE.DIRECTORY_SEPARATOR."modules".DIRECTORY_SEPARATOR."mod_itpsocialbuttons".DIRECTORY_SEPARATOR."itpshorturlsocialbuttons.php");
         $options = array(
             "login"     => $params->get("login"),
             "apiKey"    => $params->get("apiKey"),
             "service"   => $params->get("shortUrlService"),
         );
-        $shortUrl = new ItpShortUrlSocialButtons($link,$options);
+        $shortUrl = new ItpShortUrlSocialButtonsModule($link, $options);
         $shortLink = $shortUrl->getUrl();
         if(!$shortLink) {
             jimport( 'joomla.error.log' );

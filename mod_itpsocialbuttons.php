@@ -12,13 +12,14 @@
  */
 
 // no direct access
-defined( "_JEXEC" ) or die( "Restricted access" );
+defined( "_JEXEC" ) or die;
 
 require_once (dirname(__FILE__).DS.'helper.php');
 
-$urlPath = JURI::base() . "modules/mod_itpsocialbuttons/";
-$moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
-$doc = JFactory::getDocument();
+$urlPath         = JURI::base() . "modules/mod_itpsocialbuttons/";
+$moduleClassSfx  = htmlspecialchars($params->get('moduleclass_sfx'));
+
+$doc             = JFactory::getDocument();
 /** $doc JDocumentHTML **/
 
 // Loading style.css
@@ -37,6 +38,6 @@ if($params->get("shortUrlService")) {
     $link = ItpSocialButtonsHelper::getShortUrl($link, $params);
 }
 
-$stylePath = $urlPath . "images/" . $params->get("style");
+$stylePath = $urlPath . "images/" . $params->get("icons_package");
 
 require JModuleHelper::getLayoutPath('mod_itpsocialbuttons', $params->get('layout', 'default'));

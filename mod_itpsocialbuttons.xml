@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="module" version="1.5.0" method="upgrade">
-<name>ITPSocialButtons</name>
+<install type="module" version="1.5" method="upgrade">
+<name>MOD_ITPSOCIALBUTTONS</name>
 <author>Todor Iliev</author>
 <creationDate>January, 2010</creationDate>
 <copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
 <license>http://www.gnu.org/copyleft/gpl.html</license>
 <authorEmail>todor@itprism.com</authorEmail>
 <authorUrl>http://itprism.com</authorUrl>
-<version>1.8</version>
+<version>1.9</version>
 <description>MOD_ITPSOCIALBUTTONS_DESC</description>
+    <languages  folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_itpsocialbuttons.ini</language>
+    </languages>    
+    
 	<files>
 		<filename module="mod_itpsocialbuttons">mod_itpsocialbuttons.php</filename>
 		<filename>index.html</filename>
@@ -20,7 +24,7 @@
 	</files>
 
 	<params>
-		<param name="style" type="list" default="big" label="Style" description="Choose from these icon styles." >
+		<param name="icons_package" type="list" default="big" label="MOD_ITPSOCIALBUTTONS_ICONS" description="MOD_ITPSOCIALBUTTONS_ICONS_DESC" >
 	         <option value="big">Big buttons</option>
 	         <option value="small">Small buttons</option>
 	         <option value="texto">Texto</option>
@@ -53,91 +57,91 @@
 	         <option value="socialshift64">Social Shift 64x64px</option>
 	    </param>
 	                        
-	    <param name="showTitle" type="radio" default="1" label="Show title" description="Display the title which is located on the top of the icons." >
+	    <param name="showTitle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE_DESC" >
 	       <option value="0">No</option>
 	       <option value="1">Yes</option>
 	    </param>
-		<param name="title" type="text" default="Share this post" size="80" label="Title" description="The title which is located on the top of the icons." />
+		<param name="title" type="text" default="Share this post" size="80" label="MOD_ITPSOCIALBUTTONS_TITLE" description="MOD_ITPSOCIALBUTTONS_TITLE_DESC" />
 		
-	    <param name="displayLines" type="list" default="itp-sbb-bothl" label="Display lines" description="Shows or hide dividing lines which will be appear in above or below the icons." >
-           <option value="itp-sbb-nl">None</option>
-           <option value="itp-sbb-tl">Only Top</option>
-           <option value="itp-sbb-bl">Only Bottom</option>
-           <option value="itp-sbb-bothl">Both</option>
+	    <param name="displayLines" type="list" default="itp-sbb-bothl" label="MOD_ITPSOCIALBUTTONS_DISPLAY_LINES" description="MOD_ITPSOCIALBUTTONS_DISPLAY_LINES_DESC" >
+           <option value="itp-sbb-nl">MOD_ITPSOCIALBUTTONS_NONE</option>
+           <option value="itp-sbb-tl">MOD_ITPSOCIALBUTTONS_ONLY_TOP</option>
+           <option value="itp-sbb-bl">MOD_ITPSOCIALBUTTONS_ONLY_BOTTOM</option>
+           <option value="itp-sbb-bothl">MOD_ITPSOCIALBUTTONS_BOTH</option>
         </param>
         
-        <param name="displayIcons" type="list" default="itp-sbb-left" label="Icons position" description="This is a position of the icons." >
-           <option value="itp-sb-left">Left</option>
-           <option value="itp-sb-right">Right</option>
-           <option value="itp-sb-center">Center</option>
+        <param name="displayIcons" type="list" default="itp-sbb-left" label="MOD_ITPSOCIALBUTTONS_ICONS_POSITION" description="MOD_ITPSOCIALBUTTONS_ICONS_POSITION_DESC" >
+           <option value="itp-sb-left">MOD_ITPSOCIALBUTTONS_LEFT</option>
+           <option value="itp-sb-right">MOD_ITPSOCIALBUTTONS_RIGHT</option>
+           <option value="itp-sb-center">MOD_ITPSOCIALBUTTONS_CENTER</option>
         </param>
         
-        <param name="displayDelicious" type="radio" default="1" label="Display Delicious" description="Show or Hide Delicious button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displayDelicious" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
-        <param name="displayDigg" type="radio" default="1" label="Display Digg" description="Show or Hide Digg button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displayDigg" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
-        <param name="displayFacebook" type="radio" default="1" label="Display Facebook" description="Show or Hide Facebook button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displayFacebook" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK" description="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
-        <param name="displayGoogle" type="radio" default="1" label="Display Google" description="Show or Hide Google button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displayGoogle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
-        <param name="displayLinkedIn" type="radio" default="1" label="Display LinkedIn" description="Show or Hide LinkedIn button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displayLinkedIn" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN" description="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
-        <param name="displaySumbleUpon" type="radio" default="1" label="Display SumbleUpon" description="Show or Hide SumbleUpon button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displaySumbleUpon" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON" description="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
-        <param name="displayTechnorati" type="radio" default="1" label="Display Technorati" description="Show or Hide Technorati button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displayTechnorati" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
-        <param name="displayTwitter" type="radio" default="1" label="Display Twitter" description="Show or Hide Twitter button." >
-           <option value="0">No</option>
-           <option value="1">Yes</option>
+        <param name="displayTwitter" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER_DESC" >
+           <option value="1">JYES</option>
+           <option value="0">JNO</option>
         </param>
 	</params>
 
     <params group="advanced">
 		<param name="moduleclass_sfx" type="text" default="" size="80" label="MODULE_CSS_SUFFIX" description="MODULE_CSS_SUFFIX_DESC" />
         <param name="cache" type="list" default="0" label="CACHING" description="CACHING_DESC">
-            <option value="1">Use global</option>
-            <option value="0">No caching</option>
+            <option value="1">JGLOBAL_USE_GLOBAL</option>
+            <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
         </param>
         <param name="cache_time" type="text" default="900" label="CACHING_TIME" description="CACHING_TIME_DESC" />
-        <param name="@spacer1" type="spacer" default="############# SHORTENER URL SETTINGS #############" label="" description="" />
-        <param name="login" type="text" default="" label="Login" description="Username for the shortener URL service."/>
-        <param name="apiKey" type="text" default="" size="80" label="API key" description="An API key for the shortener URL serivce."/>
-        <param name="shortUrlService" type="list" default="" label="Shortener service" description="You can select a shortener URL service. To work properly, a PHP option 'allow_url_fopen' must be enabled. You must enable PHP curl for Google shortener serice." >
-           <option value="">None</option>
+        
+        <param name="@spacer1" type="spacer" default="MOD_ITPSOCIALBUTTONS_SHORTENER_SETTINGS" label="" description="" />
+        <param name="login" type="text" default="" label="MOD_ITPSOCIALBUTTONS_LOGIN" description="MOD_ITPSOCIALBUTTONS_LOGIN_DESC"/>
+        <param name="apiKey" type="text" default="" size="80" label="MOD_ITPSOCIALBUTTONS_API_KEY" description="MOD_ITPSOCIALBUTTONS_API_KEY_DESC"/>
+        <param name="shortUrlService" type="list" default="" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE" description="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE_DESC" >
+           <option value="">MOD_ITPSOCIALBUTTONS_NONE</option>
+           <option value="google">goo.gl</option>
            <option value="bitly">bit.ly</option>
-           <option value="tinycc">tiny.cc</option>
+           <option value="bitlycom">bitly.com</option>
            <option value="jmp">j.mp</option>
+           <option value="tinycc">tiny.cc</option>
         </param>
         
-        <param name="@spacer2" type="spacer" default="############# ITPSocialButtons SETTINGS #############"  />
-        <param name="loadCss" type="radio" default="1" label="Load style.css" description="The style.css is a file that conations button position and some styles of the ReTweetMe button. You can disable the file loading if you have your own styles.">
-            <option value="0">No</option>
-            <option value="1">Yes</option>
+        <param name="@spacer2" type="spacer" default="MOD_ITPSOCIALBUTTONS_SOCIALBUTTONS_SETTINGS"  />
+        <param name="loadCss" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_LOAD_STYLE" description="MOD_ITPSOCIALBUTTONS_LOAD_STYLE_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
         </param>
         
-        <param name="@spacer3" type="spacer" default="############# ADDITIONAL BUTTONS SETTINGS #############" label="" description="" />
-        <param name="ebuttons1" type="textarea" default="" label="Custom code 1" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
-        <param name="ebuttons2" type="textarea" default="" label="Custom code 2" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
-        <param name="ebuttons3" type="textarea" default="" label="Custom code 3" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
-        <param name="ebuttons4" type="textarea" default="" label="Custom code 4" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
-        <param name="ebuttons5" type="textarea" default="" label="Custom code 5" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="@spacer3" type="spacer" default="MOD_ITPSOCIALBUTTONS_ADDITIONAL_BUTTONS" label="" description="" />
+        <param name="ebuttons1" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons2" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons3" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons4" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
+        <param name="ebuttons5" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10"/>
     </params>
 	
-	<languages>
-        <language tag="en-GB">en-GB.mod_itpsocialbuttons.ini</language>
-    </languages>    
 </install>

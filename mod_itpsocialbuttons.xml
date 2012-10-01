@@ -28,7 +28,7 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="style" type="list" default="big" label="MOD_ITPSOCIALBUTTONS_ICONS" description="MOD_ITPSOCIALBUTTONS_ICONS_DESC" >
+				<field name="icons_package" type="list" default="big" label="MOD_ITPSOCIALBUTTONS_ICONS" description="MOD_ITPSOCIALBUTTONS_ICONS_DESC" >
 				   <option value="big">Big buttons</option>
                    <option value="small">Small buttons</option>
                    <option value="texto">Texto</option>
@@ -62,8 +62,8 @@
 				</field>
 									
 				<field name="showTitle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE_DESC" >
-				   <option value="0">JNO</option>
 				   <option value="1">JYES</option>
+				   <option value="0">JNO</option>
 				</field>
 				<field name="title" type="text" default="Share this post" size="80" label="MOD_ITPSOCIALBUTTONS_TITLE" description="MOD_ITPSOCIALBUTTONS_TITLE_DESC" />
 				
@@ -81,50 +81,62 @@
 				</field>
 				
 				<field name="displayDelicious" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 				<field name="displayDigg" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 				<field name="displayFacebook" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK" description="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 				<field name="displayGoogle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 				<field name="displayLinkedIn" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN" description="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 				<field name="displaySumbleUpon" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON" description="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 				<field name="displayTechnorati" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 				<field name="displayTwitter" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER_DESC" >
-				   <option value="0">No</option>
-				   <option value="1">Yes</option>
+				   <option value="1">JYES</option>
+                   <option value="0">JNO</option>
 				</field>
 			</fieldset>
 
 			<fieldset name="advanced">
-				<field name="moduleclass_sfx" type="text"
+				<field 
+				    name="moduleclass_sfx" 
+				    type="text"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
 					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-				<field name="owncache" type="list" default="1"
-					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
-					<option value="1">JGLOBAL_USE_GLOBAL</option>
-					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-				</field>
-				<field name="cache_time" type="text" default="900"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
 					
 				<field name="spacer1" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SETTINGS"  />
                 <field name="login" type="text" default="" label="MOD_ITPSOCIALBUTTONS_LOGIN" description="MOD_ITPSOCIALBUTTONS_LOGIN_DESC"/>
@@ -140,8 +152,8 @@
                 
                 <field name="spacer2" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_SOCIALBUTTONS_SETTINGS" />
                 <field name="loadCss" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_LOAD_STYLE" description="MOD_ITPSOCIALBUTTONS_LOAD_STYLE_DESC">
-                    <option value="0">JNO</option>
                     <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
                 
                 <field name="spacer3" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_ADDITIONAL_BUTTONS" />

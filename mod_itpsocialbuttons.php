@@ -38,7 +38,7 @@ if($params->get("shortUrlService")) {
     $link = ItpSocialButtonsHelper::getShortUrl($link, $params);
 }
 
-$stylePath = $urlPath."images/".$params->get("style");
+$stylePath = $urlPath."images/".$params->get("icons_package");
 
 require JModuleHelper::getLayoutPath('mod_itpsocialbuttons', $params->get('layout', 'default'));
 

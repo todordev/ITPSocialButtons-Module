@@ -1,10 +1,17 @@
 ITPSocialButtons Module for Joomla! 
 ==========================
-( Version 1.8 )
+( Version 1.9 )
 --------------------------
 
 Changelog
 ---------
+
+Version 1.9
+-------------
+* Removed white space and fixed some css issues. Thanks Kurtis LoVerde.
+* Added new URL shortener services - goo.gl and bitly.com.
+* Fixed shortener services 
+* Improved language
 
 Version 1.8
 -------------

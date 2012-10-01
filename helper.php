@@ -12,7 +12,7 @@
  */
 
 // no direct access
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die;
 
 class ItpSocialButtonsHelper{
     
@@ -25,26 +25,23 @@ class ItpSocialButtonsHelper{
      */
     public static function getShortUrl($link, $params){
         
-        JLoader::register("ItpShortUrlSocialButtons",JPATH_PLUGINS.DS."content".DS."itpsocialbuttons".DS."itpshorturlsocialbuttons.php");
+        JLoader::register("ItpShortUrlSocialButtonsModule", JPATH_BASE.DIRECTORY_SEPARATOR."modules".DIRECTORY_SEPARATOR."mod_itpsocialbuttons".DIRECTORY_SEPARATOR."itpshorturlsocialbuttons.php");
         $options = array(
             "login"     => $params->get("login"),
             "apiKey"    => $params->get("apiKey"),
             "service"   => $params->get("shortUrlService"),
         );
-        $shortUrl = new ItpShortUrlSocialButtons($link,$options);
+        $shortUrl  = new ItpShortUrlSocialButtonsModule($link, $options);
         $shortLink = $shortUrl->getUrl();
         if(!$shortLink) {
-            jimport( 'joomla.error.log' );
-            // get an instance of JLog for myerrors log file
-            $log = JLog::getInstance();
-            // create entry array
-            $entry = array(
-                'LEVEL' => '1',
-                'STATUS' => "ITPSocialButtons",
-                'COMMENT' => $shortUrl->getError()
+            // Add logger
+            JLog::addLogger(
+                array(
+                    'text_file' => 'error.php',
+                 )
             );
-            // add entry to the log
-            $log->addEntry($entry);
+            
+            JLog::add($shortUrl->getError(), JLog::ERROR);
         } else {
             $link = $shortLink;
         }

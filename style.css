@@ -38,7 +38,7 @@
 }
 
 .itp-sb-left{
-	float:left;
+	text-align:left;
 }
 
 .itp-sb-left a{
@@ -47,7 +47,7 @@
 }
 
 .itp-sb-right{
-    float:right;
+    text-align:right;
 }
 
 .itp-sb-right a{

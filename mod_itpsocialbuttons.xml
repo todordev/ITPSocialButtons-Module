@@ -62,8 +62,8 @@
 				</field>
 									
 				<field name="showTitle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE_DESC" >
-				   <option value="1">JYES</option>
 				   <option value="0">JNO</option>
+				   <option value="1">JYES</option>
 				</field>
 				<field name="title" type="text" default="Share this post" size="80" label="MOD_ITPSOCIALBUTTONS_TITLE" description="MOD_ITPSOCIALBUTTONS_TITLE_DESC" />
 				
@@ -81,36 +81,36 @@
 				</field>
 				
 				<field name="displayDelicious" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 				<field name="displayDigg" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 				<field name="displayFacebook" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK" description="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 				<field name="displayGoogle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 				<field name="displayLinkedIn" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN" description="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 				<field name="displaySumbleUpon" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON" description="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 				<field name="displayTechnorati" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 				<field name="displayTwitter" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER_DESC" >
-				   <option value="1">JYES</option>
-                   <option value="0">JNO</option>
+				   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
 				</field>
 			</fieldset>
 
@@ -152,8 +152,8 @@
                 
                 <field name="spacer2" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_SOCIALBUTTONS_SETTINGS" />
                 <field name="loadCss" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_LOAD_STYLE" description="MOD_ITPSOCIALBUTTONS_LOAD_STYLE_DESC">
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
                 </field>
                 
                 <field name="spacer3" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_ADDITIONAL_BUTTONS" />

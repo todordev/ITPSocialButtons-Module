@@ -111,7 +111,7 @@ class ItpSocialButtonsHelper{
 			'onclick' => "window.open(this.href,'win2','".$status."'); return false;"
 		);
 
-		$text   = '<img src="'.$imageSrc.'" alt="'. JText::_('PLG_CONTENT_ITPSOCIALBUTTONS_SHARE_WITH_FRIENDS').'" title="'. JText::_('PLG_CONTENT_ITPSOCIALBUTTONS_SHARE_WITH_FRIENDS').'" />';
+		$text   = '<img src="'.$imageSrc.'" alt="'. JText::_('MOD_ITPSOCIALBUTTONS_SHARE_WITH_FRIENDS').'" title="'. JText::_('MOD_ITPSOCIALBUTTONS_SHARE_WITH_FRIENDS').'" />';
 		
 		$output = JHtml::_('link', $url, $text, $attribs);
 		return $output;

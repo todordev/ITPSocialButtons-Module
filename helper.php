@@ -25,13 +25,15 @@ class ItpSocialButtonsHelper{
      */
     public static function getShortUrl($link, $params){
         
-        JLoader::register("ItpShortUrlSocialButtonsModule", JPATH_BASE.DIRECTORY_SEPARATOR."modules".DIRECTORY_SEPARATOR."mod_itpsocialbuttons".DIRECTORY_SEPARATOR."itpshorturlsocialbuttons.php");
+        JLoader::register("ItpSocialButtonsModuleShortUrl", dirname(__FILE__).DIRECTORY_SEPARATOR."shorturl.php");
+
         $options = array(
             "login"     => $params->get("login"),
             "apiKey"    => $params->get("apiKey"),
             "service"   => $params->get("shortUrlService"),
         );
-        $shortUrl  = new ItpShortUrlSocialButtonsModule($link, $options);
+
+        $shortUrl  = new ItpSocialButtonsModuleShortUrl($link, $options);
         $shortLink = $shortUrl->getUrl();
         if(!$shortLink) {
             // Add logger
@@ -42,11 +44,12 @@ class ItpSocialButtonsHelper{
             );
             
             JLog::add($shortUrl->getError(), JLog::ERROR);
-        } else {
-            $link = $shortLink;
-        }
+            
+            // Get original link
+            $shortLink = $link;
+        } 
         
-        return $link;
+        return $shortLink;
             
     }
     
@@ -68,6 +71,15 @@ class ItpSocialButtonsHelper{
             $btnName = "ebuttons" . $i;
             $extraButton = $params->get($btnName, "");
             if(!empty($extraButton)) {
+                
+                // Parse ITPrism markup
+                if(false !== strpos($extraButton, "<itp:email")) {
+                    $matches     = array();
+                    if(preg_match('/src="([^"]*)"/i', $extraButton, $matches)) {
+                        $extraButton = self::sendToFriendIcon($matches[1], $url);
+                    }
+                }
+                
                 $extraButton = str_replace("{URL}", $url,$extraButton);
                 $extraButton = str_replace("{TITLE}", $title,$extraButton);
                 $html  .= $extraButton;
@@ -76,6 +88,35 @@ class ItpSocialButtonsHelper{
         
         return $html;
     }
+    
+	/**
+     * 
+     * Generate a link that displays a popup with e-mail form.
+     * The form can be used to send page to your friends
+     * 
+     * @param string $imageSrc
+     * @param string $link
+     */
+    public static function sendToFriendIcon($imageSrc, $link) {
+        
+        JLoader::register("MailToHelper", JPATH_SITE . '/components/com_mailto/helpers/mailto.php');
+        
+		$template = JFactory::getApplication()->getTemplate();
+		$url	  = 'index.php?option=com_mailto&tmpl=component&template='.$template.'&link='.MailToHelper::addLink($link);
+
+		$status   = 'width=400,height=350,menubar=yes,resizable=yes';
+
+		$attribs  = array(
+		    'title'   => JText::_('JGLOBAL_EMAIL'),
+			'onclick' => "window.open(this.href,'win2','".$status."'); return false;"
+		);
+
+		$text   = '<img src="'.$imageSrc.'" alt="'. JText::_('PLG_CONTENT_ITPSOCIALBUTTONS_SHARE_WITH_FRIENDS').'" title="'. JText::_('PLG_CONTENT_ITPSOCIALBUTTONS_SHARE_WITH_FRIENDS').'" />';
+		
+		$output = JHtml::_('link', $url, $text, $attribs);
+		return $output;
+	}
+	
     
     public static function getDeliciousButton($title, $link, $style){
             

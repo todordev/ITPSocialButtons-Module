@@ -14,7 +14,7 @@
 // no direct access
 defined( "_JEXEC" ) or die;
 
-require_once (dirname(__FILE__).DIRECTORY_SEPARATOR.'helper.php');
+JLoader::register('ItpSocialButtonsHelper', dirname(__FILE__).DIRECTORY_SEPARATOR.'helper.php');
 
 $urlPath        = JURI::base() . "modules/mod_itpsocialbuttons/";
 $moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));

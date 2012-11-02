@@ -2,13 +2,14 @@
 <extension type="module" version="2.5" client="site" method="upgrade">
 	<name>MOD_ITPSOCIALBUTTONS</name>
 	<author>Todor Iliev</author>
-	<creationDate>January, 2010</creationDate>
 	<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>todor@itprism.com</authorEmail>
 	<authorUrl>http://itprism.com</authorUrl>
-	<version>1.9</version>
+	<version>2.0</version>
+	<creationDate>02 November, 2012</creationDate>
 	<description>MOD_ITPSOCIALBUTTONS_DESC</description>
+	
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_itpsocialbuttons.ini</language>
 		<language tag="en-GB">en-GB/en-GB.mod_itpsocialbuttons.sys.ini</language>
@@ -19,12 +20,14 @@
 		<filename>index.html</filename>
 		<filename>helper.php</filename>
 		<filename>style.css</filename>
-		<filename>itpshorturlsocialbuttons.php</filename>
+		<filename>shorturl.php</filename>
 		<filename>README.md</filename>
 		<folder>images</folder>
 		<folder>tmpl</folder>
 	</files>
-
+	
+    <help url="MOD_ITPSOCIALBUTTONS_HELP_URL" />
+    
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
@@ -114,6 +117,28 @@
 				</field>
 			</fieldset>
 
+            <fieldset name="shortener_url" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SETTINGS">
+                <field name="login" type="text" default="" label="MOD_ITPSOCIALBUTTONS_LOGIN" description="MOD_ITPSOCIALBUTTONS_LOGIN_DESC"/>
+                <field name="apiKey" type="text" default="" size="80" label="MOD_ITPSOCIALBUTTONS_API_KEY" description="MOD_ITPSOCIALBUTTONS_API_KEY_DESC"/>
+                <field name="shortUrlService" type="list" default="" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE" description="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE_DESC" >
+                   <option value="">MOD_ITPSOCIALBUTTONS_NONE</option>
+                   <option value="google">goo.gl</option>
+                   <option value="bitly">bit.ly</option>
+                   <option value="bitlycom">bitly.com</option>
+                   <option value="jmp">j.mp</option>
+                   <option value="tinycc">tiny.cc</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="additional_buttons_code" label="MOD_ITPSOCIALBUTTONS_ADDITIONAL_BUTTONS">
+                <field name="ebuttons1" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons2" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons3" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons4" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons5" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                
+            </fieldset>
+            
 			<fieldset name="advanced">
 				<field 
 				    name="moduleclass_sfx" 
@@ -138,30 +163,12 @@
                     label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
                     description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
 					
-				<field name="spacer1" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SETTINGS"  />
-                <field name="login" type="text" default="" label="MOD_ITPSOCIALBUTTONS_LOGIN" description="MOD_ITPSOCIALBUTTONS_LOGIN_DESC"/>
-                <field name="apiKey" type="text" default="" size="80" label="MOD_ITPSOCIALBUTTONS_API_KEY" description="MOD_ITPSOCIALBUTTONS_API_KEY_DESC"/>
-                <field name="shortUrlService" type="list" default="" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE" description="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE_DESC" >
-                   <option value="">MOD_ITPSOCIALBUTTONS_NONE</option>
-                   <option value="google">goo.gl</option>
-                   <option value="bitly">bit.ly</option>
-                   <option value="bitlycom">bitly.com</option>
-                   <option value="jmp">j.mp</option>
-                   <option value="tinycc">tiny.cc</option>
-                </field>
-                
-                <field name="spacer2" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_SOCIALBUTTONS_SETTINGS" />
+                <field name="spacer1" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_SOCIALBUTTONS_SETTINGS" />
                 <field name="loadCss" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_LOAD_STYLE" description="MOD_ITPSOCIALBUTTONS_LOAD_STYLE_DESC">
                    <option value="0">JNO</option>
                    <option value="1">JYES</option>
                 </field>
                 
-                <field name="spacer3" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_ADDITIONAL_BUTTONS" />
-                <field name="ebuttons1" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons2" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons3" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons4" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons5" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
 			</fieldset>
 		</fields>
 	</config>

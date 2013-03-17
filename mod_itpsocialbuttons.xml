@@ -6,8 +6,8 @@
 	<license>http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>todor@itprism.com</authorEmail>
 	<authorUrl>http://itprism.com</authorUrl>
-	<version>2.0</version>
-	<creationDate>02 November, 2012</creationDate>
+	<version>2.1</version>
+	<creationDate>17 March, 2013</creationDate>
 	<description>MOD_ITPSOCIALBUTTONS_DESC</description>
 	
 	<languages folder="language">
@@ -145,7 +145,8 @@
 				    type="text"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
 					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-				<field
+				
+                <field
                     name="cache"
                     type="list"
                     default="1"

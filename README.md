@@ -1,10 +1,14 @@
 ITPSocialButtons Module for Joomla! 
 ==========================
-( Version 2.0 )
+( Version 2.1 )
 --------------------------
 
 Changelog
 ---------
+
+Version 2.1
+-------------
+* Improved short URL functionality
 
 Varsion 2.0
 -------------

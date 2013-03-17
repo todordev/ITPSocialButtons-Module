@@ -33,21 +33,26 @@ class ItpSocialButtonsHelper{
             "service"   => $params->get("shortUrlService"),
         );
 
-        $shortUrl  = new ItpSocialButtonsModuleShortUrl($link, $options);
-        $shortLink = $shortUrl->getUrl();
-        if(!$shortLink) {
-            // Add logger
-            JLog::addLogger(
-                array(
-                    'text_file' => 'error.php',
-                 )
-            );
+        try {
             
-            JLog::add($shortUrl->getError(), JLog::ERROR);
+            $shortUrl  = new ItpSocialButtonsModuleShortUrl($link,$options);
+            $shortLink = $shortUrl->getUrl();
             
             // Get original link
-            $shortLink = $link;
-        } 
+            if(!$shortLink) {
+                $shortLink = $link;
+            } 
+            
+        } catch(Exception $e) {
+            
+            JLog::add($e->getMessage(), JLog::DEBUG);
+            
+            // Get original link
+            if(!$shortLink) {
+                $shortLink = $link;
+            }
+                
+        }
         
         return $shortLink;
             

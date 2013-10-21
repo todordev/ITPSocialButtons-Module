@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="2.5" client="site" method="upgrade">
+<extension type="module" version="3.1" client="site" method="upgrade">
 	<name>MOD_ITPSOCIALBUTTONS</name>
 	<author>Todor Iliev</author>
-	<copyright>Copyright (C) 2010 Todor Iliev ( ITPrism.com )</copyright>
+	<copyright>Copyright (C) 2013 Todor Iliev ( ITPrism.com )</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>todor@itprism.com</authorEmail>
 	<authorUrl>http://itprism.com</authorUrl>
-	<version>2.1</version>
-	<creationDate>17 March, 2013</creationDate>
-	<description>MOD_ITPSOCIALBUTTONS_DESC</description>
+	<version>2.2</version>
+	<creationDate>21 October, 2013</creationDate>
+	<description><![CDATA[
+    <p>It is <a href='http://itprism.com/free-joomla-extensions/social-buttons-plugin' target='_blank'>ITPSocialButtons module</a> for Joomla! that displays social media sharing buttons on your site.</p>
+    <p><a href='http://itprism.com/help/35-social-buttons-documentation-faq' target='_blank'>Read documentation</a> that will help you to setup the extensions.</p>
+    <p>Invest in the extension improvement and <a href='http://itprism.com/sponsorship' title='Sponsoring' target='_blank'>sponsor it via SMS, PayPal or Bitcoin</a>.</p>
+    <p><a href='http://itprism.com/' target='_blank'>Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
+    <p>Please, <a href='http://extensions.joomla.org/extensions/social-web/social-bookmarking/14094' target='_blank'>vote for this extension</a> on Joomla! Extensions Directory!</p>
+    ]]></description>
 	
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_itpsocialbuttons.ini</language>
@@ -64,7 +70,7 @@
                    <option value="socialshift64">Social Shift 64x64px</option>
 				</field>
 									
-				<field name="showTitle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE_DESC" >
+				<field name="showTitle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TITLE_DESC" class="btn-group">
 				   <option value="0">JNO</option>
 				   <option value="1">JYES</option>
 				</field>
@@ -83,35 +89,35 @@
 				   <option value="itp-sb-center">MOD_ITPSOCIALBUTTONS_CENTER</option>
 				</field>
 				
-				<field name="displayDelicious" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS_DESC" >
+				<field name="displayDelicious" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DELICIOUS_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
-				<field name="displayDigg" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG_DESC" >
+				<field name="displayDigg" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG" description="MOD_ITPSOCIALBUTTONS_DISPLAY_DIGG_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
-				<field name="displayFacebook" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK" description="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK_DESC" >
+				<field name="displayFacebook" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK" description="MOD_ITPSOCIALBUTTONS_DISPLAY_FACEBOOK_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
-				<field name="displayGoogle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE_DESC" >
+				<field name="displayGoogle" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE" description="MOD_ITPSOCIALBUTTONS_DISPLAY_GOOGLE_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
-				<field name="displayLinkedIn" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN" description="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN_DESC" >
+				<field name="displayLinkedIn" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN" description="MOD_ITPSOCIALBUTTONS_DISPLAY_LINKEDIN_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
-				<field name="displaySumbleUpon" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON" description="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON_DESC" >
+				<field name="displaySumbleUpon" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON" description="MOD_ITPSOCIALBUTTONS_DISPLAY_SUMBLEUPON_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
-				<field name="displayTechnorati" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI_DESC" >
+				<field name="displayTechnorati" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TECHNORATI_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
-				<field name="displayTwitter" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER_DESC" >
+				<field name="displayTwitter" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER" description="MOD_ITPSOCIALBUTTONS_DISPLAY_TWITTER_DESC" class="btn-group">
 				   <option value="0">JNO</option>
                    <option value="1">JYES</option>
 				</field>
@@ -119,7 +125,7 @@
 
             <fieldset name="shortener_url" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SETTINGS">
                 <field name="login" type="text" default="" label="MOD_ITPSOCIALBUTTONS_LOGIN" description="MOD_ITPSOCIALBUTTONS_LOGIN_DESC"/>
-                <field name="apiKey" type="text" default="" size="80" label="MOD_ITPSOCIALBUTTONS_API_KEY" description="MOD_ITPSOCIALBUTTONS_API_KEY_DESC"/>
+                <field name="apiKey" type="text" default="" size="80" label="MOD_ITPSOCIALBUTTONS_API_KEY" description="MOD_ITPSOCIALBUTTONS_API_KEY_DESC" class="span3" />
                 <field name="shortUrlService" type="list" default="" label="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE" description="MOD_ITPSOCIALBUTTONS_SHORTENER_SERVICE_DESC" >
                    <option value="">MOD_ITPSOCIALBUTTONS_NONE</option>
                    <option value="google">goo.gl</option>
@@ -131,11 +137,11 @@
             </fieldset>
             
             <fieldset name="additional_buttons_code" label="MOD_ITPSOCIALBUTTONS_ADDITIONAL_BUTTONS">
-                <field name="ebuttons1" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons2" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons3" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons4" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
-                <field name="ebuttons5" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons1" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" class="span6" />
+                <field name="ebuttons2" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" class="span6" />
+                <field name="ebuttons3" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" class="span6" />
+                <field name="ebuttons4" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" class="span6" />
+                <field name="ebuttons5" type="textarea" default="" label="MOD_ITPSOCIALBUTTONS_CUSTOM_CODE" description="MOD_ITPSOCIALBUTTONS_EXTRA_DESC" cols="50" rows="10" filter="raw" class="span6" />
                 
             </fieldset>
             
@@ -149,23 +155,13 @@
                 <field
                     name="cache"
                     type="list"
-                    default="1"
+                    default="0"
                     label="COM_MODULES_FIELD_CACHING_LABEL"
                     description="COM_MODULES_FIELD_CACHING_DESC">
-                    <option
-                        value="1">JGLOBAL_USE_GLOBAL</option>
-                    <option
-                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
                 </field>
-                <field
-                    name="cache_time"
-                    type="text"
-                    default="900"
-                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
-					
-                <field name="spacer1" type="spacer" class="text" label="MOD_ITPSOCIALBUTTONS_SOCIALBUTTONS_SETTINGS" />
-                <field name="loadCss" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_LOAD_STYLE" description="MOD_ITPSOCIALBUTTONS_LOAD_STYLE_DESC">
+                
+                <field name="loadCss" type="radio" default="1" label="MOD_ITPSOCIALBUTTONS_LOAD_STYLE" description="MOD_ITPSOCIALBUTTONS_LOAD_STYLE_DESC" class="btn-group">
                    <option value="0">JNO</option>
                    <option value="1">JYES</option>
                 </field>

@@ -1,14 +1,10 @@
 <?php
 /**
- * @package      ITPrism Modules
- * @subpackage   ITPSocialButtons
+ * @package      ITPSocialButtons
+ * @subpackage   Modules
  * @author       Todor Iliev
- * @copyright    Copyright (C) 2010 Todor Iliev <todor@itprism.com>. All rights reserved.
+ * @copyright    Copyright (C) 2013 Todor Iliev <todor@itprism.com>. All rights reserved.
  * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
- * ITPSocialButtons is free software. This version may have been modified pursuant
- * to the GNU General Public License, and as distributed it includes or
- * is derivative of works licensed under the GNU General Public License or
- * other free or open source software licenses.
  */
 
 // no direct access
@@ -29,10 +25,11 @@ class ItpSocialButtonsHelper{
 
         $options = array(
             "login"     => $params->get("login"),
-            "apiKey"    => $params->get("apiKey"),
+            "api_key"   => $params->get("apiKey"),
             "service"   => $params->get("shortUrlService"),
         );
 
+        $shortLink = "";
         try {
             
             $shortUrl  = new ItpSocialButtonsModuleShortUrl($link,$options);
@@ -150,7 +147,7 @@ class ItpSocialButtonsHelper{
         
         $img_url = $style . "/google.png";
         
-        return '<a href="http://www.google.com/bookmarks/mark?op=edit&amp;bkmk=' . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Bookmarks") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Bookmarks") . '" /></a>';
+        return '<a href="https://plus.google.com/share?url=' . $link . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Plus") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Google Plus") . '" /></a>';
     }
     
     public static function getStumbleuponButton($title, $link, $style){

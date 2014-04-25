@@ -3,14 +3,14 @@
  * @package      ITPSocialButtons
  * @subpackage   Modules
  * @author       Todor Iliev
- * @copyright    Copyright (C) 2013 Todor Iliev <todor@itprism.com>. All rights reserved.
+ * @copyright    Copyright (C) 2014 Todor Iliev <todor@itprism.com>. All rights reserved.
  * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
  */
 
 // no direct access
 defined( "_JEXEC" ) or die;
 ?>
-<div class="itp-socialbuttons-mod<?php echo $moduleClassSfx;?>">
+<div class="itp-socialbuttons-mod<?php echo $moduleclass_sfx;?>">
    <?php if($params->get('showTitle')){ ?>
    <h4><?php echo $params->get('title');?></h4>
    <?php }?>
@@ -28,13 +28,13 @@ defined( "_JEXEC" ) or die;
             echo ItpSocialButtonsHelper::getFacebookButton($title, $link, $stylePath);
         }
         if($params->get("displayGoogle")) {
-            echo ItpSocialButtonsHelper::getGoogleButton($title, $link, $stylePath);
+            echo ItpSocialButtonsHelper::getGoogleButton($link, $stylePath);
         }
         if($params->get("displaySumbleUpon")) {
             echo ItpSocialButtonsHelper::getStumbleuponButton($title, $baseLink, $stylePath);
         }
         if($params->get("displayTechnorati")) {
-            echo ItpSocialButtonsHelper::getTechnoratiButton($title, $link, $stylePath);            
+            echo ItpSocialButtonsHelper::getTechnoratiButton($link, $stylePath);
         }
         if($params->get("displayTwitter")) {
             echo ItpSocialButtonsHelper::getTwitterButton($title, $link, $stylePath);

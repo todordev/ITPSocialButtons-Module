@@ -3,7 +3,7 @@
  * @package      ITPSocialButtons
  * @subpackage   Modules
  * @author       Todor Iliev
- * @copyright    Copyright (C) 2013 Todor Iliev <todor@itprism.com>. All rights reserved.
+ * @copyright    Copyright (C) 2014 Todor Iliev <todor@itprism.com>. All rights reserved.
  * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
  */
 
@@ -16,7 +16,7 @@ class ItpSocialButtonsHelper{
      * A method that make a long url to short url
      * 
      * @param string $link
-     * @param array $params
+     * @param JRegistry $params
      * @return string
      */
     public static function getShortUrl($link, $params){
@@ -61,7 +61,7 @@ class ItpSocialButtonsHelper{
      * 
      * @param string $title Article Title
      * @param string $url   Article URL
-     * @param array $params Plugin parameters
+     * @param JRegistry $params Plugin parameters
      * 
      * @return string
      */
@@ -98,6 +98,8 @@ class ItpSocialButtonsHelper{
      * 
      * @param string $imageSrc
      * @param string $link
+     *
+     * @return string
      */
     public static function sendToFriendIcon($imageSrc, $link) {
         
@@ -143,7 +145,7 @@ class ItpSocialButtonsHelper{
         return '<a href="http://www.facebook.com/sharer.php?u=' . $link . '&amp;t=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Facebook") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Facebook") . '" /></a>';
     }
     
-    public static function getGoogleButton($title, $link, $style){
+    public static function getGoogleButton($link, $style){
         
         $img_url = $style . "/google.png";
         
@@ -157,7 +159,7 @@ class ItpSocialButtonsHelper{
         return '<a href="http://www.stumbleupon.com/submit?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Stumbleupon") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "Stumbleupon") . '" /></a>';
     }
     
-    public static function getTechnoratiButton($title, $link, $style){
+    public static function getTechnoratiButton( $link, $style){
         
         $img_url = $style . "/technorati.png";
         

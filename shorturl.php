@@ -2,7 +2,7 @@
 /**
  * @package      ITPSocialButtons
  * @subpackage   Modules
- * @copyright    Copyright (C) 2013 Todor Iliev <todor@itprism.com>. All rights reserved.
+ * @copyright    Copyright (C) 2014 Todor Iliev <todor@itprism.com>. All rights reserved.
  * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
  */
 
@@ -75,9 +75,11 @@ class ItpSocialButtonsModuleShortUrl{
     }
     
     /**
-     * 
-     * Get a short URL from Bitly
+     * Get a short URL from Bitly.
+     *
      * @param string $domain - bit.ly, j.mp, bitly.com
+     *
+     * @throws Exception
      */
     protected function getBitlyURL($domain = "bit.ly") {
         

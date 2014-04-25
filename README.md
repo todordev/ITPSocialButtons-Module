@@ -1,10 +1,13 @@
 ITPSocialButtons Module for Joomla! 
 ==========================
-( Version 2.2 )
+( Version 2.3 )
 - - -
 
 Changelog
 ---------
+
+###v2.3
+* Improved
 
 ###v2.2
 * Fixed [issue #22] (https://github.com/ITPrism/ITPSocialButtons-Plugin/issues/22). Problems with module when Joomla caching is on.

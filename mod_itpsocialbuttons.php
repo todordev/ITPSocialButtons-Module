@@ -3,7 +3,7 @@
  * @package      ITPSocialButtons
  * @subpackage   Modules
  * @author       Todor Iliev
- * @copyright    Copyright (C) 2013 Todor Iliev <todor.iliev@itprism.com>. All rights reserved.
+ * @copyright    Copyright (C) 2014 Todor Iliev <todor.iliev@itprism.com>. All rights reserved.
  * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
  */
 
@@ -12,8 +12,8 @@ defined( "_JEXEC" ) or die;
 
 JLoader::register('ItpSocialButtonsHelper', dirname(__FILE__).DIRECTORY_SEPARATOR.'helper.php');
 
-$urlPath        = JUri::base() . "modules/mod_itpsocialbuttons/";
-$moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
+$urlPath         = JUri::base() . "modules/mod_itpsocialbuttons/";
+$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
 $doc = JFactory::getDocument();
 /** @var $doc JDocumentHTML **/

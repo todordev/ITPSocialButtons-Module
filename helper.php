@@ -82,6 +82,18 @@ class ItpSocialButtonsHelper
                     }
                 }
 
+                // Parse ITPrism markup
+                if (false !== strpos($extraButton, "<itp:print")) {
+                    $matches = array();
+                    if (preg_match('/src="([^"]*)"/i', $extraButton, $matches)) {
+                        if (!$params->get("print_link_type", 0)) {
+                            $extraButton = self::printIconLink($matches[1]);
+                        } else {
+                            $extraButton = self::printIconPopup($matches[1], $url);
+                        }
+                    }
+                }
+
                 $extraButton = str_replace("{URL}", $url, $extraButton);
                 $extraButton = str_replace("{TITLE}", $title, $extraButton);
                 $html .= $extraButton;
@@ -124,6 +136,55 @@ class ItpSocialButtonsHelper
         return $output;
     }
 
+    /**
+     * Generate a link that prints current page.
+     *
+     * @param string $imageSrc
+     *
+     * @return string
+     */
+    private static function printIconLink($imageSrc)
+    {
+        $icon = '<img src="' . $imageSrc . '" alt="' . JText::_('MOD_ITPSOCIALBUTTONS_PRINT_THIS_PAGE') . '" title="' . JText::_('MOD_ITPSOCIALBUTTONS_PRINT_THIS_PAGE') . '" />';
+
+        return '<a href="#" onclick="window.print();return false;">' . $icon . '</a>';
+    }
+
+    /**
+     * Generate a popup window that prints current page.
+     *
+     * @param string $imageSrc
+     * @param string $link
+     *
+     * @return string
+     */
+    private static function printIconPopup($imageSrc, $link)
+    {
+        $app = JFactory::getApplication();
+
+        $link = rawurldecode($link);
+
+        // Set the number of page.
+        $page = "";
+        if ($app->input->getInt("limitstart")) {
+            $page = "&page=".$app->input->getInt("limitstart");
+        }
+
+        // Generate an URL
+        $url  = $link . '?tmpl=component&print=1&layout=default' . $page;
+
+        $status = 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no';
+
+        $attributes = array(
+            'title'   => JText::_('JGLOBAL_PRINT'),
+            'onclick' => "window.open(this.href,'win2','" . $status . "'); return false;",
+            'rel'     => 'nofollow'
+        );
+
+        $text = '<img src="' . $imageSrc . '" alt="' . JText::_('MOD_ITPSOCIALBUTTONS_PRINT_THIS_PAGE') . '" title="' . JText::_('MOD_ITPSOCIALBUTTONS_PRINT_THIS_PAGE') . '" />';
+
+        return JHtml::_('link', $url, $text, $attributes);
+    }
 
     public static function getDeliciousButton($title, $link, $style)
     {

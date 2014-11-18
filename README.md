@@ -1,6 +1,6 @@
 ITPSocialButtons Module for Joomla! 
 ==========================
-( Version 2.4 )
+( Version 2.5 )
 - - -
 
 ITPSocialButtons is a Joomla! module that display sharing buttons on the website.

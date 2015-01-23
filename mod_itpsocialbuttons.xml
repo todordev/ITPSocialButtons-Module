@@ -2,12 +2,12 @@
 <extension type="module" version="3.3" client="site" method="upgrade">
 	<name>MOD_ITPSOCIALBUTTONS</name>
 	<author>Todor Iliev</author>
-	<copyright>Copyright (C) 2014 Todor Iliev ( ITPrism.com )</copyright>
+	<copyright>Copyright (C) 2015 Todor Iliev ( ITPrism.com )</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>todor@itprism.com</authorEmail>
 	<authorUrl>http://itprism.com</authorUrl>
-	<version>2.5</version>
-	<creationDate>18 November, 2014</creationDate>
+	<version>2.6</version>
+	<creationDate>23 January, 2015</creationDate>
 	<description><![CDATA[
     <p>It is <a href='http://itprism.com/free-joomla-extensions/social-buttons-plugin' target='_blank'>ITPSocialButtons module</a> for Joomla! that displays social media sharing buttons on your site.</p>
     <p><a href='http://itprism.com/help/35-social-buttons-documentation-faq' target='_blank'>Read documentation</a> that will help you to setup the extensions.</p>

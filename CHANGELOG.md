@@ -1,6 +1,9 @@
 ITPSocialButtons Module Release Notes
 ==========================
 
+###v2.6
+* Typo
+
 ###v2.5
 * Added a print button functionality.
 

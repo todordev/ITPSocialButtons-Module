@@ -228,7 +228,7 @@ class ItpSocialButtonsHelper {
     }
 
     public static function getVKButton($title, $link, $style) {
-        $img_url = $style . "/VK.png";
+        $img_url = $style . "/vk.png";
 
         return '<a href="http://vk.com/share.php?url=' . $link . '&amp;title=' . $title . '" title="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "ВК") . '" target="_blank" ><img src="' . $img_url . '" alt="' . JText::sprintf("MOD_ITPSOCIALBUTTONS_SUBMIT", "BK") . '" /></a>';
     }
